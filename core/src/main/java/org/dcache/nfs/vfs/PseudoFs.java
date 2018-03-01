@@ -299,7 +299,7 @@ public class PseudoFs extends ForwardingFileSystem {
 
     @Override
     public void setattr(Inode inode, Stat stat) throws IOException {
-        int mask = ACE4_WRITE_ATTRIBUTES;
+        int mask = ACE4_WRITE_DATA;
         if (stat.isDefined(Stat.StatAttribute.OWNER)) {
             mask |= ACE4_WRITE_OWNER;
         }
